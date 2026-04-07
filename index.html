@@ -3,201 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armenian Speed Dating | Urartu Coffee</title>
+    <title>Armenian Speed Dating | Home</title>
     <style>
-        <style>
-        /* This ensures the entire browser window is yellow */
+        /* Shared Styles: Global */
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
-            min-height: 100vh; /* Fills the vertical screen */
-            background-color: #FDFD47; /* The bright yellow from your sign */
-            color: #D32F2F; /* The red/pink text color */
+            min-height: 100vh; /* Fills screen height */
+            background-color: #FDFD47; /* Bright Yellow from the sign */
+            color: #D32F2F; /* Deep Red/Pink from the sign */
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            scroll-behavior: smooth;
+            box-sizing: border-box;
         }
 
-       
+        /* Shared Styles: Navigation Bar */
+        nav {
+            background-color: #FDFD47;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(211, 47, 47, 0.2);
         }
 
         nav a {
             text-decoration: none;
             color: #D32F2F;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 1rem;
         }
 
-        /* Hero Image Section */
-        .hero {
+        /* Shared Styles: Active Page Link */
+        nav a.active {
+            color: #C71585; /* Different color for the page we are on */
+            border-bottom: 2px solid #C71585;
+            padding-bottom: 5px;
+        }
+
+        /* Main Content Container */
+        .main-container {
             display: flex;
             justify-content: center;
-            background-color: #FDFD47; /* Matches the rest */
-            padding: 40px 20px;
+            align-items: center;
+            padding: 60px 20px;
         }
 
+        /* Hero Image - Centered and Responsive */
         .hero-img {
             max-width: 90%;
             height: auto;
             display: block;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #FDFD47; /* Ensuring the middle is yellow too */
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-
-        .btn {
-            background-color: #D32F2F;
-            color: #FDFD47;
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            display: inline-block;
-            text-transform: uppercase;
-        }
-
-        .faq-box { text-align: left; max-width: 600px; margin: 0 auto; }
-    </style>
-        /* Navigation */
-        nav {
-            background-color: rgba(255, 255, 153, 0.9); /* Semi-transparent yellow */
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            text-align: center;
-            border-bottom: 2px solid #FF1493; /* Pink Border */
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #FF1493;
-            font-weight: bold;
-            margin: 0 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        nav a:hover {
-            color: #C71585; /* Darker Pink on hover */
-        }
-
-        /* Hero Image Section */
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        /* This centers and displays the new image */
-        .hero-img {
-            max-width: 80%; /* Responsive width */
-            height: auto;
-            max-height: 500px; /* Optional: cap maximum height */
-            display: block;
-        }
-
-        /* Content Sections */
-        .container {
-            text-align: center;
-            padding: 40px 20px 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            padding: 50px 20px;
-            border-top: 1px solid rgba(255, 20, 147, 0.2);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-top: 0;
-            text-transform: uppercase;
-        }
-
-        /* Call to Action Button */
-        .btn {
-            background-color: #FF1493; /* Pink Button */
-            color: #FFFF99; /* Yellow Text */
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            background-color: #C71585;
-        }
-
-        /* FAQ Styling */
-        .faq-box {
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            .hero-img { max-width: 95%; }
-            h2 { font-size: 2rem; }
-            nav a { margin: 0 8px; font-size: 0.8rem; }
+            border-radius: 10px; /* Optional subtle corner smoothing */
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#faq">FAQ</a>
-        <a href="#signup">Sign Up</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="faq.html">FAQ</a>
+        <a href="join.html">Sign Up</a>
     </nav>
 
-    <div id="home" class="hero">
+    <div class="main-container">
         <img src="hero.png" alt="Urartu Coffee Presents Armenian Speed Dating" class="hero-img">
-    </div>
-
-    <div class="container">
-        
-        <p style="font-weight: bold; font-size: 1.2rem; max-width: 500px; margin: 0 auto 50px auto;">
-            Bringing together Armenians who are ready to find their person. 
-            We hope you find your match.
-        </p>
-
-        <section id="faq">
-            <h2>FAQ</h2>
-            <div class="faq-box">
-                <p><strong>Where is it?</strong><br>Urartu Coffee, Glendale CA.</p>
-                <p><strong>Who is it for?</strong><br>Armenian singles ready to find their person.</p>
-                <p><strong>Is there an age range?</strong><br>This session is for Armenian singles in their 20s and 30s.</p>
-            </div>
-        </section>
-
-        <section id="signup">
-            <h2>SIGN UP</h2>
-            <p>Ready to meet your match? Click below to join our next event.</p>
-            <a href="#" class="btn">REGISTER NOW</a>
-        </section>
-
     </div>
 
 </body>
