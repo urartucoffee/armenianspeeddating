@@ -5,18 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armenian Speed Dating | Urartu Coffee</title>
     <style>
-        /* General Styles */
-        body {
-            html, body {
+        <style>
+        /* This ensures the entire browser window is yellow */
+        html, body {
             margin: 0;
             padding: 0;
-            min-height: 100%; /* Forces the color to the bottom of the page */
-            background-color: #FDFD47; /* Bright Yellow from your sign */
-            color: #D32F2F; /* Deep Red/Pink from your sign */
+            width: 100%;
+            min-height: 100vh; /* Fills the vertical screen */
+            background-color: #FDFD47; /* The bright yellow from your sign */
+            color: #D32F2F; /* The red/pink text color */
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
+            scroll-behavior: smooth;
         }
 
+        /* The navigation bar needs to be the same yellow or it will look like a separate block */
+        nav {
+            background-color: #FDFD47; 
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(211, 47, 47, 0.2); /* Subtle red line */
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #D32F2F;
+            font-weight: bold;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Image Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            background-color: #FDFD47; /* Matches the rest */
+            padding: 40px 20px;
+        }
+
+        .hero-img {
+            max-width: 90%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FDFD47; /* Ensuring the middle is yellow too */
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .btn {
+            background-color: #D32F2F;
+            color: #FDFD47;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .faq-box { text-align: left; max-width: 600px; margin: 0 auto; }
+    </style>
         /* Navigation */
         nav {
             background-color: rgba(255, 255, 153, 0.9); /* Semi-transparent yellow */
